@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="peca.css">
+    <title>Oficina</title>
+    <header class="header-oficina">
+    <div class="painel-industrial">
+        <div class="luz-alerta"></div>
+        <h1>OPERAÇÃO: PEÇA OU SUCATA?</h1>
+        <p class="aviso-seguranca">Cuidado com o dedo! Siga o roteiro ou chore no almoxarifado.</p>
+    </div>
+    <a href="index.html" class="btn-voltar-metal">← Abortar Missão</a>
+</header>
+
+<main class="chao-de-fabrica">
+
+    <section class="card-teoria neon-azul">
+    <div class="header-card">
+        <span class="badge-vibe">OFICINA</span>
+        <h2>Roteiro de Execução: Mão na Massa</h2>
+    </div>
+    <p>Siga a ordem cronológica para não estragar a peça. Marque o que já foi feito!</p>
+
+    <div class="lista-roteiro">
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 10 - CORTAR:</strong> Cortar a matéria-prima com ≈ 50mm a mais (75,00 x 65,00 mm).
+            </div>
+        </label>
+
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 20 - LIMAR:</strong> Limagem com controle de planicidade, esquadro, paralelo e dimensional. Bastarda (71 a 72mm) e murça até 70mm.
+            </div>
+        </label>
+
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 30 - TRAÇAR ÂNGULO:</strong> Utilizar transferidor de graus e riscador para marcar aresta de corte em ângulo.
+            </div>
+        </label>
+
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 40 - SERRAR ÂNGULO:</strong> Utilizar arco de serra com lâmina de 24 dentes.
+            </div>
+        </label>
+
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 50, 60 e 70:</strong> Traçar furos, furar e abrir rosca nos furos #1 e #3.
+            </div>
+        </label>
+
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 80, 90 e 100:</strong> Traçar raio, serrar raio e traçar raio 6,0.
+            </div>
+        </label>
+
+        <label class="item-checklist">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <div class="texto-op">
+                <strong>op 110 e 120:</strong> Limar o raio e retirar rebarbas (Acabamento final).
+            </div>
+        </label>
+    </div>
+</section>
+
+<section class="card-teoria neon-amarelo resultado-peca">
+    <div class="header-card">
+        <span class="badge-vibe">INSPEÇÃO</span>
+        <h2>Resultado Final: O Troféu</h2>
+    </div>
+    <p>Se você seguiu o roteiro e não chorou no almoxarifado, sua peça deve estar parecida com esta!</p>
+    
+    <div class="moldura-peca-final">
+        <div class="rebite top-left"></div>
+        <div class="rebite top-right"></div>
+        <div class="rebite bottom-left"></div>
+        <div class="rebite bottom-right"></div>
+        
+        <img src="img/peça.jpg" alt="Peça mecânica finalizada conforme roteiro" class="foto-produto-final">
+        
+        <div class="sombra-bancada"></div>
+    </div>
+</section>
+
+<section class="card-teoria neon-azul">
+    <div class="header-card">
+        <span class="badge-vibe">FLUXO DE PRODUÇÃO</span>
+        <h2>Plano de Operação: Barra Chata</h2>
+    </div>
+    
+    <div class="info-peca">
+        <p><strong>Peça:</strong> Barra Chata | <strong>Bruto:</strong> 75mm | <strong>Final:</strong> 60mm X 70mm</p>
+    </div>
+
+    <div class="lista-roteiro">
+        <div class="item-roteiro-tecnico">
+            <div class="seq">01-02</div>
+            <div class="detalhe">
+                <strong>Traçamento e Corte</strong>
+                <span class="ferramenta">🛠️ Riscador, régua, serra manual e transferidor de ângulos (32°).</span>
+                <span class="obs">💡 Medida bruta e precisão no traçado.</span>
+            </div>
+        </div>
+
+        <div class="item-roteiro-tecnico">
+            <div class="seq">03-04</div>
+            <div class="detalhe">
+                <strong>Serragem e Limagem de Ajuste</strong>
+                <span class="ferramenta">🛠️ Serra de fita e Lima Bastarda.</span>
+                <span class="obs">💡 Ajuste para 70mm (deixar sobremetal para acabamento).</span>
+            </div>
+        </div>
+
+        <div class="item-roteiro-tecnico">
+            <div class="seq">05-06</div>
+            <div class="detalhe">
+                <strong>Corte Vertical e Desbaste</strong>
+                <span class="ferramenta">🛠️ Serra manual e Lima Bastarda.</span>
+                <span class="obs">💡 Corte da chapa (32mm) e retirada de rebarbas.</span>
+            </div>
+        </div>
+
+        <div class="item-roteiro-tecnico">
+            <div class="seq">07-08</div>
+            <div class="detalhe">
+                <strong>Furação (Ø 10mm com prof. 10mm)</strong>
+                <span class="ferramenta">🛠️ Graminho, martelo, punção e Furadeira de coluna.</span>
+                <span class="obs">💡 Puncionar bem o centro e usar fluido de corte.</span>
+            </div>
+        </div>
+
+        <div class="item-roteiro-tecnico">
+            <div class="seq">09-10</div>
+            <div class="detalhe">
+                <strong>Macheamento (M12 e 1/2" 12 F)</strong>
+                <span class="ferramenta">🛠️ Jogo de machos e desandador.</span>
+                <span class="obs">💡 Rosca métrica e rosca em polegada.</span>
+            </div>
+        </div>
+
+        <div class="item-roteiro-tecnico">
+            <div class="seq">11-12</div>
+            <div class="detalhe">
+                <strong>Corte na Serra de Coluna e Ajuste</strong>
+                <span class="ferramenta">🛠️ Máquina serra de coluna e Lima Bastarda.</span>
+                <span class="obs">💡 Respeitar as cotas (30mm x 8mm) e ajuste dimensional.</span>
+            </div>
+        </div>
+
+        <div class="item-roteiro-tecnico">
+            <div class="seq">13-14</div>
+            <div class="detalhe">
+                <strong>Confecção do Raio e Acabamento</strong>
+                <span class="ferramenta">🛠️ Lima Bastarda e Lima Murça.</span>
+                <span class="obs">💡 Movimento circular (Raio de 6mm) e retirar marcas de riscos.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="card-teoria neon-amarelo">
+    <div class="header-card">
+        <span class="badge-vibe">INTERATIVO</span>
+        <h2>Inspeção Técnica Virtual</h2>
+    </div>
+    <p>Toque nos pontos azuis para ver os detalhes da fabricação:</p>
+
+    <div class="container-hotspot">
+        <img src="img/peça2.jpg" class="imagem-peca-interativa">
+
+        <div class="ponto-interativo" style="top: 20%; left: 30%;" onclick="mostrarInfo('ângulo')">
+            <span class="pulso"></span>+
+        </div>
+
+        <div class="ponto-interativo" style="top: 50%; left: 50%;" onclick="mostrarInfo('furos')">
+            <span class="pulso"></span>+
+        </div>
+
+        <div class="ponto-interativo" style="top: 80%; left: 70%;" onclick="mostrarInfo('raio')">
+            <span class="pulso"></span>+
+        </div>
+
+        <div id="painel-info" class="painel-info-suspenso">
+            <h4 id="titulo-info">Clique em um ponto</h4>
+            <p id="texto-info">Selecione uma parte da peça para detalhes.</p>
+            <button onclick="fecharInfo()">Fechar</button>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <script src="peca.js"></script>
+
+</body>
+</html>

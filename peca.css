@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:wght@400;700&display=swap');
+
+body {
+    background-color: #e0e0e0; /* Cinza claro cor de máquina */
+    background-image: radial-gradient(#bcbcbc 1px, transparent 1px);
+    background-size: 20px 20px; /* Efeito de chapa perfurada */
+}
+
+.header-oficina {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #222; /* Preto graxa */
+    border-bottom: 10px solid #ffcc00; /* Amarelo atenção */
+    padding: 20px;
+}
+
+.painel-industrial {
+    background: #333;
+    padding: 30px;
+    border: 4px solid #555;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: inset 0 0 15px #000;
+    text-align: center;
+}
+
+.luz-alerta {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0 0 10px red;
+    animation: pisca 1s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.header-oficina h1 {
+    font-family: 'Black Ops One', system-ui; /* Fonte estilo militar/industrial */
+    color: #ffcc00;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    letter-spacing: 2px;
+}
+
+.aviso-seguranca {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.btn-voltar-metal {
+    margin-top: 20px;
+    background: #555;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #777;
+    transition: 0.3s;
+}
+
+.btn-voltar-metal:hover {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* --- ADAPTAÇÃO PARA O "CHÃO DE FÁBRICA" MOBILE --- */
+@media (max-width: 768px) {
+    
+    .header-oficina {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .painel-industrial {
+        width: 100%;
+        padding: 20px 10px;
+        border-width: 3px;
+    }
+
+    .header-oficina h1 {
+        font-size: 1.6rem; /* Ajusta para não quebrar em 3 linhas */
+        letter-spacing: 1px;
+    }
+
+    .luz-alerta {
+        width: 15px;
+        height: 15px;
+        top: 5px;
+        right: 5px;
+    }
+
+    /* Ajuste do Checklist no Celular */
+    .item-checklist {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .texto-op {
+        font-size: 0.85rem; /* Letra um pouco menor para caber mais info */
+    }
+
+    .checkmark {
+        width: 22px; /* Checkbox um tiquinho menor */
+        height: 22px;
+    }
+
+    .btn-voltar-metal {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+/* Para celulares muito pequenos (iPhone SE e antigos) */
+@media (max-width: 380px) {
+    .header-oficina h1 {
+        font-size: 1.3rem;
+    }
+    
+    .aviso-seguranca {
+        font-size: 0.7rem;
+    }
+}
+
+/* Container Principal do Roteiro */
+.chao-de-fabrica {
+    max-width: 800px;
+    margin: -30px auto 50px; /* Sobe um pouco para sobrepor o header industrial */
+    padding: 0 15px;
+    position: relative;
+    z-index: 5;
+}
+
+.card-teoria.neon-azul {
+    background: #ffffff;
+    border: 3px solid #0054a6;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px rgba(0, 84, 166, 0.2); /* Sombra sólida estilo técnico */
+    padding: 25px;
+}
+
+.header-card h2 {
+    font-family: 'Black Ops One', cursive;
+    color: #0054a6;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+/* Estilização da Lista Roteiro */
+.lista-roteiro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Cada item do Checklist */
+.item-checklist {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    border-left: 6px solid #0054a6;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.item-checklist:hover {
+    background: #ebebeb;
+    transform: translateX(5px);
+}
+
+/* Esconde o checkbox real */
+.item-checklist input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* O Checkbox customizado */
+.checkmark {
+    height: 28px;
+    width: 28px;
+    background-color: #ddd;
+    border: 2px solid #555;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Quando marcado */
+.item-checklist input:checked + .checkmark {
+    background-color: #28a745; /* Verde sucesso */
+    border-color: #1e7e34;
+}
+
+/* O símbolo de check */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.item-checklist input:checked + .checkmark:after {
+    display: block;
+}
+
+/* Texto da operação */
+.texto-op {
+    font-size: 1rem;
+    color: #222;
+    line-height: 1.4;
+}
+
+.texto-op strong {
+    color: #0054a6;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    display: block; /* Faz o "OP XX" ficar em cima do texto no mobile */
+}
+
+/* Efeito de conclusão */
+.item-checklist input:checked ~ .texto-op {
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    .card-teoria.neon-azul {
+        padding: 15px;
+    }
+    
+    .texto-op {
+        font-size: 0.9rem;
+    }
+
+    .checkmark {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+/* Nova seção com Neon Amarelo (Atenção/Inspeção) */
+.neon-amarelo {
+    border: 3px solid #ffcc00 !important;
+    box-shadow: 10px 10px 0px rgba(255, 204, 0, 0.2) !important;
+    margin-top: 40px;
+}
+
+.resultado-peca .header-card h2 {
+    color: #ffcc00;
+}
+
+/* Moldura Industrial */
+.moldura-peca-final {
+    background: #444; /* Cor de metal fosco */
+    padding: 20px;
+    border: 2px solid #666;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que nada vaze */
+    box-shadow: inset 0 0 30px #000; /* Sombra interna para dar profundidade */
+}
+
+/* Estilização da Foto */
+.foto-produto-final {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #777;
+    z-index: 5; /* Fica acima da sombra da bancada */
+    
+    /* Efeito de luz "spotlight" em cima da peça */
+    box-shadow: 0 -30px 60px -10px rgba(255,255,255,0.4), 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Os Rebites nas quinas */
+.rebite {
+    width: 12px;
+    height: 12px;
+    background: #777;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: inset -1px -1px 2px #000, 1px 1px 2px rgba(255,255,255,0.3);
+}
+
+.top-left { top: 10px; left: 10px; }
+.top-right { top: 10px; right: 10px; }
+.bottom-left { bottom: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+/* Sombra na base para parecer que está apoiada */
+.sombra-bancada {
+    position: absolute;
+    bottom: -10px;
+    width: 90%;
+    height: 30px;
+    background: rgba(0,0,0,0.6);
+    filter: blur(10px);
+    z-index: 2;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .moldura-peca-final {
+        padding: 10px;
+    }
+    .rebite {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+
+/* Container de info da peça */
+.info-peca {
+    background: #222;
+    color: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+}
+
+/* Item da lista estilo "Ficha Técnica" */
+.item-roteiro-tecnico {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.item-roteiro-tecnico:hover {
+    border-color: #0054a6;
+    transform: scale(1.02);
+}
+
+/* Coluna da Sequência */
+.seq {
+    background: #0054a6;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-family: 'Black Ops One', cursive;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Detalhes da Operação */
+.detalhe {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhe strong {
+    color: #333;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.ferramenta {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 600px) {
+    .item-roteiro-tecnico {
+        flex-direction: row;
+    }
+    .seq {
+        padding: 10px;
+        min-width: 50px;
+        font-size: 0.9rem;
+    }
+    .detalhe strong {
+        font-size: 0.85rem;
+    }
+}
+
+.obs {
+    font-size: 0.8rem;
+    color: #0054a6;
+    background: #e3f2fd;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR (Telas até 600px) --- */
+@media (max-width: 600px) {
+    .container-projeto {
+        padding: 0 10px; /* Margens menores para o texto respirar */
+    }
+
+    .bloco-explicacao, .bloco-vistas-ortograficas, .card-diedro-grande {
+        padding: 20px 15px; /* Diminui o espaço interno */
+        margin: 20px auto;
+    }
+
+    .titulo-zueira-dt {
+        font-size: 1.8rem; /* Título um pouco menor para não quebrar feio */
+    }
+
+    .subtitulo-projeto {
+        font-size: 1rem;
+    }
+
+    /* Ajuste específico para as molduras das imagens */
+    .moldura-diedro-grande, .moldura-imagem-vistas, .moldura-imagem-tecnica {
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    /* Garante que a imagem ocupe a largura total disponível */
+    .moldura-diedro-grande img, .img-vistas, .img-tecnica {
+        max-width: 100%; 
+        width: 100%;
+    }
+
+    /* Ajuste no resumo técnico para não ficar apertado */
+    .resumo-tecnico-vistas {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+/* --- CONTAINER DO JOGO DE INSPEÇÃO --- */
+.container-hotspot {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Mantém um tamanho bom para celular e PC */
+    margin: 20px auto;
+    border: 4px solid #333;
+    border-radius: 12px;
+    overflow: hidden; /* Garante que a imagem não saia da borda */
+    background: #000;
+}
+
+.imagem-peca-interativa {
+    width: 100%;
+    display: block;
+    opacity: 0.9; /* Dá um ar mais técnico/sombrio */
+}
+
+/* --- ESTILO DOS PONTOS AZUIS (+) --- */
+.ponto-interativo {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #0054a6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 84, 166, 0.8);
+}
+
+/* Efeito de Ondinha (Pulso) */
+.pulso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0054a6;
+    border-radius: 50%;
+    animation: pulsar-azul 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulsar-azul {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* --- PAINEL QUE SOBE COM A EXPLICAÇÃO --- */
+.painel-info-suspenso {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Preto quase total para ler bem */
+    color: #fff;
+    padding: 20px;
+    border-top: 4px solid #ffcc00;
+    display: none; /* Fica escondido até o JS mandar aparecer */
+    z-index: 20;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.painel-info-suspenso h4 {
+    color: #ffcc00;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-family: 'Black Ops One', cursive;
+}
+
+.painel-info-suspenso p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.painel-info-suspenso button {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* --- AJUSTE PARA TELAS PEQUENAS (CELULAR) --- */
+@media (max-width: 600px) {
+    .ponto-interativo {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+    
+    .painel-info-suspenso p {
+        font-size: 0.8rem;
+    }
+}

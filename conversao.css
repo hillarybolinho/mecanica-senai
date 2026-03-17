@@ -1,0 +1,467 @@
+/* --- Header da Conversão --- */
+.p-header-conversao {
+    background-color: #ffffff;
+    padding: 80px 20px; /* Mais espaço para o título respirar */
+    text-align: center;
+    border-bottom: 4px solid #0D47A1;
+    background-image: 
+        linear-gradient(rgba(13, 71, 161, 0.07) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(13, 71, 161, 0.07) 1.5px, transparent 1.5px);
+    background-size: 30px 30px; /* Quadriculado maior para parecer papel técnico */
+}
+
+.titulo-zueira {
+    color: #ff4d4d;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Ajusta conforme o tamanho da tela */
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.subtitulo-tecnico {
+    color: #0D47A1;
+    font-size: 1.5rem; /* Aumentado */
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.link-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    color: #0D47A1;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #0D47A1;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.link-voltar:hover {
+    background: #0D47A1;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* --- Container de Explicação --- */
+.container-ajuda {
+    max-width: 900px; /* Um pouco mais largo */
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+.card-ajuda-fracao {
+    background: #ffffff;
+    border: 3px solid #0D47A1; /* Borda mais grossa */
+    border-radius: 16px;
+    padding: 35px; /* Mais preenchimento interno */
+    margin-bottom: 40px;
+    box-shadow: 8px 8px 0px rgba(13, 71, 161, 0.1); /* Sombra sólida mais moderna */
+}
+
+.card-ajuda-fracao h3 {
+    color: #0D47A1;
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Título interno maior */
+    border-bottom: 2px solid #f0f7ff;
+    padding-bottom: 10px;
+}
+
+.card-ajuda-fracao p {
+    font-size: 1.15rem; /* Texto de leitura maior */
+    line-height: 1.6;
+    color: #444;
+}
+
+/* --- Passos (1, 2, 3) --- */
+.passos-conversao {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f8fbff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #e0eafc;
+    transition: 0.2s;
+}
+
+.passo:hover {
+    background: #f0f7ff;
+    border-color: #0D47A1;
+}
+
+.num-passo {
+    background: #0D47A1;
+    color: white;
+    width: 40px; /* Bolinhas maiores */
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.passo p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* --- Exemplo em Destaque --- */
+.exemplo-destaque {
+    background: #fff5f5;
+    border-left: 6px solid #ff4d4d;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2rem; /* Exemplo bem visível */
+    font-family: 'Poppins', sans-serif; /* Mantendo a poppins para ler melhor */
+    line-height: 1.8;
+}
+
+.exemplo-destaque strong {
+    color: #ff4d4d;
+    font-size: 1.3rem;
+}
+
+/* O Quadro de Destaque */
+.quadro-regra-ouro {
+    background-color: #f0f7ff; /* Fundo azul bem clarinho para destacar do branco */
+    border: 3px solid #0D47A1; /* Borda grossa azul */
+    border-radius: 15px;
+    overflow: hidden; /* Garante que o header respeite a curvatura */
+    box-shadow: 10px 10px 0px rgba(13, 71, 161, 0.1); /* Sombra sólida */
+    margin-bottom: 30px;
+}
+
+/* Faixa superior do quadro */
+.quadro-header {
+    background-color: #0D47A1;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quadro-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Conteúdo interno do quadro */
+.quadro-corpo {
+    padding: 25px;
+    color: #333;
+}
+
+.quadro-corpo p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Estilo de fórmula matemática */
+.formula-destaque {
+    background-color: #ffffff;
+    border: 2px dashed #0D47A1;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #0D47A1;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.exemplo-mini {
+    font-style: italic;
+    color: #666;
+    font-size: 1rem !important;
+}
+
+.fluxo-simplificacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.item-fluxo {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.item-fluxo-final {
+    font-size: 1.5rem;
+    color: #0D47A1;
+    font-weight: 900;
+    background: #eef5ff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 2px solid #0D47A1;
+}
+
+.seta {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .fluxo-simplificacao {
+        gap: 5px;
+    }
+    .item-fluxo { font-size: 0.9rem; }
+}
+
+/* Botão Play Sensacional (com o efeito de pulso que você curtiu) */
+.botao-play-sensacional {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #E61919;
+    color: white;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    box-shadow: 0 0 0 0 rgba(230, 25, 25, 0.7);
+    animation: pulsar-botao 2s infinite;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+.botao-play-sensacional:hover {
+    background: #b31212;
+    transform: scale(1.05);
+    animation: none;
+}
+
+@keyframes pulsar-botao {
+    0% { box-shadow: 0 0 0 0 rgba(230, 25, 25, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(230, 25, 25, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(230, 25, 25, 0); }
+}
+
+/* Estilo do Título da Calculadora */
+.titulo-calculadora {
+    text-align: center;
+    margin: 60px 0 30px 0;
+}
+
+.titulo-calculadora h2 {
+    color: #0D47A1;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #0D47A1;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.titulo-calculadora p {
+    color: #666;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.secao-calculadora-titulo {
+    text-align: center;
+    margin: 50px auto 30px;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* Título em Vermelho Impactante */
+.titulo-principal-calc {
+    color: #ff4d4d;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    letter-spacing: -1px;
+}
+
+/* Subtítulo em Azul Metrologia */
+.subtitulo-calc {
+    color: #0D47A1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Linha decorativa embaixo do subtítulo */
+.subtitulo-calc::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background-color: #0D47A1;
+    border-radius: 2px;
+}
+
+.container-calculadoras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-calc {
+    background: white;
+    border: 2px solid #0D47A1;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.calc-header {
+    background: #0D47A1;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.calc-body {
+    padding: 25px;
+}
+
+.calc-body label {
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Estilo para os Inputs de Fração */
+.input-fracao, .input-simples {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-fracao input, .input-simples input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.input-fracao span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0D47A1;
+}
+
+.unidade {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Botão da Calculadora */
+.btn-calc {
+    width: 100%;
+    background: #0D47A1;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.btn-calc:hover {
+    background: #1976D2;
+}
+
+/* Caixa de Resultado */
+.resultado-box {
+    margin-top: 20px;
+    background: #f0f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0D47A1;
+    border: 1px dashed #0D47A1;
+}
+
+.input-fracao-completa {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#pol-inteira {
+    width: 60px;
+    padding: 12px;
+    border: 2px solid #0D47A1;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bloco-fracao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.bloco-fracao input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.barra-divisora {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}

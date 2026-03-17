@@ -1,0 +1,569 @@
+/* Importando a fonte para manter o padrão */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* O Fundo Quadriculado Matemático */
+.area-desenho {
+    background-color: #ffffff;
+    background-image: 
+        linear-gradient(rgba(13, 71, 161, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 71, 161, 0.1) 1px, transparent 1px);
+    background-size: 25px 25px; /* Tamanho do grid */
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header Estilo Folha A4/A3 */
+.header-projeto {
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #0D47A1; /* Azul Técnico */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+}
+
+.moldura-titulo {
+    display: inline-block;
+    border: 3px solid #333; /* Borda preta estilo legenda de desenho */
+    padding: 20px 40px;
+    position: relative;
+    background: white;
+}
+
+/* Título em Azul e Preto */
+.titulo-zueira-dt {
+    color: #0D47A1;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Subtítulo em Verde (Destaque de Aprovação) */
+.subtitulo-projeto {
+    color: #2E7D32; /* Verde floresta/técnico */
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Botão Voltar discreto */
+.link-voltar-projeto {
+    display: inline-block;
+    margin-top: 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.link-voltar-projeto:hover {
+    background: #333;
+    color: white;
+}
+
+.container-projeto {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bloco-explicacao {
+    background: white;
+    border: 1px solid #0D47A1;
+    padding: 40px;
+    position: relative;
+    box-shadow: 10px 10px 0px rgba(13, 71, 161, 0.05);
+}
+
+/* Aquele detalhe de código de projeto no canto */
+.detalhe-tecnico-topo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #0D47A1;
+    font-weight: bold;
+}
+
+.bloco-explicacao h2 {
+    color: #333;
+    border-left: 5px solid #2E7D32; /* Verde no título interno */
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.bloco-explicacao p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Estilização da sua Imagem */
+.moldura-imagem-tecnica {
+    background: #f9f9f9;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.img-tecnica {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #333;
+    filter: grayscale(100%); /* Deixa a foto em preto e branco para estilo técnico */
+    transition: 0.3s;
+}
+
+.img-tecnica:hover {
+    filter: grayscale(0%); /* Volta a cor original quando passa o mouse */
+}
+
+.legenda-imagem {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+.bloco-vistas-ortograficas {
+    background: white;
+    border: 2px solid #2E7D32; /* Verde Técnico */
+    border-radius: 8px;
+    padding: 30px;
+    margin: 40px auto;
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.05); /* Brilho verde sutil */
+    position: relative;
+}
+
+.header-vistas {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.icone-bussola {
+    font-size: 1.8rem;
+}
+
+.header-vistas h2 {
+    color: #0D47A1; /* Título em Azul Técnico */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.corpo-vistas p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Moldura Bonitinha para a sua Imagem */
+.moldura-imagem-vistas {
+    background: #fdfdfd;
+    border: 3px solid #333; /* Borda preta estilo legenda */
+    padding: 15px;
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito na Imagem (Começa colorida, mas com zoom sutil no hover) */
+.img-vistas {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.img-vistas:hover {
+    transform: scale(1.03); /* Dá um zoom de 3% para destacar os detalhes */
+    filter: brightness(110%); /* Dá um leve brilho */
+}
+
+/* Bloco de Resumo com Checklist */
+.resumo-tecnico-vistas {
+    background: #f0f7ff;
+    border-left: 5px solid #0D47A1;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Alerta de Dúvida do Aluno */
+.alerta-senai {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.bloco-diedro-rapido {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.header-diedro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #0D47A1;
+}
+
+.grid-diedros {
+    display: flex;
+    gap: 30px; /* Aumentei um pouco o espaço entre os cards */
+    flex-wrap: wrap;
+    margin-top: 30px; /* Mais espaço pro título respirar */
+    justify-content: center; /* Centraliza se ficarem um embaixo do outro no celular */
+}
+
+.card-diedro {
+    flex: 1;
+    /* Aumentei o min-width para 350px para acomodar a imagem maior */
+    min-width: 350px; 
+    background: #fdfdfd;
+    border: 2px solid #333;
+    padding: 30px; /* Mais espaço interno */
+    text-align: center;
+    transition: 0.3s;
+    display: flex; /* Centraliza o conteúdo verticalmente também */
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-diedro:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Brilho maior no hover */
+    transform: translateY(-5px); /* Dá uma "levantadinha" no hover */
+}
+
+.moldura-diedro {
+    margin: 20px 0;
+    padding: 20px; /* Mais padding na moldura */
+    background: #fff;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ocupa toda a largura do card */
+}
+
+.img-diedro {
+    /* AQUI ESTÁ A MÁGICA: Aumentei consideravelmente */
+    max-width: 250px; 
+    width: 100%; /* Garante que ela cresça até o max-width */
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); /* Sombra suave na própria imagem */
+}
+
+.card-diedro h3 {
+    font-size: 1.6rem; /* Aumentei um pouco o título do diedro */
+    color: #333;
+    margin-top: 10px;
+}
+
+.card-diedro p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+
+/* Estilo do fundo do modal (preto com opacidade) */
+.modal-zoom {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Fundo bem escuro */
+    cursor: zoom-out;
+}
+
+/* A imagem dentro do modal */
+.conteudo-modal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px; /* Tamanho máximo da foto aberta */
+    animation: zoomAnimacao 0.3s;
+}
+
+.bloco-diedro-vertical {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.conteudo-diedro-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaço generoso entre um diedro e outro */
+}
+
+.card-diedro-grande {
+    background: #fff;
+    border: 2px solid #333;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.05); /* Sombra sólida estilo técnico */
+}
+
+.moldura-diedro-grande {
+    margin: 20px 0;
+    padding: 30px;
+    background: #f9f9f9;
+    border: 1px dashed #0D47A1;
+}
+
+.moldura-diedro-grande img {
+    /* Agora a imagem tem liberdade para crescer! */
+    max-width: 500px; 
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.badge-pais {
+    background: #0D47A1;
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR (Telas até 600px) --- */
+@media (max-width: 600px) {
+    .container-projeto {
+        padding: 0 10px; /* Margens menores para o texto respirar */
+    }
+
+    .bloco-explicacao, .bloco-vistas-ortograficas, .card-diedro-grande {
+        padding: 20px 15px; /* Diminui o espaço interno */
+        margin: 20px auto;
+    }
+
+    .titulo-zueira-dt {
+        font-size: 1.8rem; /* Título um pouco menor para não quebrar feio */
+    }
+
+    .subtitulo-projeto {
+        font-size: 1rem;
+    }
+
+    /* Ajuste específico para as molduras das imagens */
+    .moldura-diedro-grande, .moldura-imagem-vistas, .moldura-imagem-tecnica {
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    /* Garante que a imagem ocupe a largura total disponível */
+    .moldura-diedro-grande img, .img-vistas, .img-tecnica {
+        max-width: 100%; 
+        width: 100%;
+    }
+
+    /* Ajuste no resumo técnico para não ficar apertado */
+    .resumo-tecnico-vistas {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+/* --- SEÇÃO DE VÍDEOS --- */
+.secao-videos-dt {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.container-botoes-video {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.btn-video {
+    background: #0D47A1;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-bottom: 4px solid #001220;
+}
+
+.btn-video:hover {
+    background: #2E7D32; /* Muda para verde no hover */
+    transform: translateY(-3px);
+}
+
+/* --- ÁREA DA PRANCHETA --- */
+.layout-prancheta {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.exemplo-passo-passo {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.exemplo-passo-passo img {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.container-canvas {
+    flex: 2;
+    min-width: 350px;
+    background: #fff;
+    border: 3px solid #333;
+    position: relative;
+}
+
+/* O Canvas com fundo quadriculado */
+#quadroDesenho {
+    width: 100%;
+    height: 400px;
+    cursor: crosshair;
+    background-image: 
+        linear-gradient(#f0f0f0 1px, transparent 1px),
+        linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: block;
+}
+
+/* Controles */
+.controles-canvas {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-ferramenta {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #666;
+    color: white;
+}
+
+.btn-ferramenta.ativo { background: #00d4ff; color: #000; }
+.btn-ferramenta.limpar { background: #ff4d4d; }
+
+.status-salvo {
+    color: #4CAF50;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+/* Ajuste para Celular */
+@media (max-width: 600px) {
+    #quadroDesenho { height: 300px; }
+    .btn-video { font-size: 0.9rem; }
+}
+
+/* Fundo escurecido */
+.modal-confirmacao {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px); /* Efeito de vidro embaçado no fundo */
+    align-items: center;
+    justify-content: center;
+}
+
+/* A caixa do aviso */
+.conteudo-aviso {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 3px solid #0D47A1;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: entradaModal 0.3s ease-out;
+}
+
+@keyframes entradaModal {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.icone-alerta { font-size: 3rem; display: block; margin-bottom: 10px; }
+
+.conteudo-aviso h3 { color: #0D47A1; margin-bottom: 10px; }
+
+.conteudo-aviso p { color: #555; margin-bottom: 25px; }
+
+/* Botoes do Modal */
+.botoes-aviso { display: flex; gap: 10px; justify-content: center; }
+
+.btn-confirmar, .btn-cancelar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-confirmar { background: #ff4d4d; color: white; }
+.btn-confirmar:hover { background: #cc0000; }
+
+.btn-cancelar { background: #eee; color: #333; }
+.btn-cancelar:hover { background: #ddd; }

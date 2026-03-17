@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolerância e Elementos - Guia SENAI</title>
+    <link rel="stylesheet" href="tolerancia.css">
+</head>
+<body class="pagina-tolerancia">
+
+    <header class="header-neon">
+        <div class="moldura-energia">
+            <h1>Tolerância: Onde o Filho Chora e a Mãe não Vê</h1>
+            <p class="subtitulo-tolerancia">Porque na mecânica, "mais ou menos" é o caminho para o lixo.</p>
+            <p2 class="tagline">Se passar de 0,01mm, já pode chorar!</p2    >
+            
+        </div>
+        <a href="index.html" class="btn-voltar-clean">← Voltar para a Base</a>
+    </header>
+
+    <main class="fluxo-conteudo">
+
+        <section class="card-teoria neon-azul">
+    <div class="header-card">
+        <span class="badge-vibe">CONCEITO</span>
+        <h2>Nada é Perfeito (Infelizmente)</h2>
+    </div>
+    <p>Na mecânica, a perfeição é cara e impossível. Por isso, toda peça tem uma <strong>Tolerância</strong>: a variação aceitável entre o tamanho máximo e o mínimo. Se sair disso, é sucata!</p>
+    
+    <div class="regra-de-ouro">
+        <div class="regra-item">
+            <span class="letra-grande">H7</span>
+            <p><strong>FUROS</strong> são sempre<br><span class="destaque-red">MAIÚSCULOS</span></p>
+        </div>
+        <div class="divisor-regra"></div>
+        <div class="regra-item">
+            <span class="letra-grande">g6</span>
+            <p><strong>EIXOS</strong> são sempre<br><span class="destaque-blue">minúsculos</span></p>
+        </div>
+    </div>
+</section>
+
+<section class="card-teoria neon-vermelho">
+    <div class="header-card">
+        <span class="badge-vibe">TABELA DE IT</span>
+        <h2>Qual a sua precisão?</h2>
+    </div>
+    <p>Escolha o grupo de tolerância para ver onde ele é usado:</p>
+
+    <div class="seletor-it">
+        <button class="btn-it active" onclick="mudarIT('fina', this)">Extra Precisa (IT 01-06)</button>
+        <button class="btn-it" onclick="mudarIT('media', this)">Corrente (IT 07-11)</button>
+        <button class="btn-it" onclick="mudarIT('grosseira', this)">Grosseira (IT 12-16)</button>
+    </div>
+
+    <div id="painelIT" class="painel-info-it">
+        <h3 id="tituloIT">Extra Precisa (IT 01 a IT 06)</h3>
+        <p id="descIT">Usada em calibradores, blocos padrão e instrumentos de alta precisão. Aqui o erro é quase zero!</p>
+        <div class="exemplo-uso">Exemplo: Rolamentos de alta rotação.</div>
+    </div>
+</section>
+
+<section class="secao-elementos">
+    <div class="header-vibe-central">
+        <span class="emoji-grande">🔩</span>
+        <h2>Elementos de Fixação</h2>
+        <p>A arte de manter as coisas no lugar (ou não).</p>
+    </div>
+
+    <div class="grid-elementos">
+        <div class="card-fixacao movel">
+            <div class="badge-tipo">Móvel</div>
+            <h3>Família dos Parafusos</h3>
+            <p>Se você montou e pode desmontar sem quebrar nada, é aqui! Essencial para manutenção.</p>
+            <div class="container-foto-elemento">
+                <img src="img/parafuso.png" alt="Parafusos, Porcas e Chavetas" class="foto-tecnica">
+            </div>
+            <ul>
+                <li>✅ Parafusos e Porcas</li>
+                <li>✅ Arruelas</li>
+                <li>✅ Chavetas e Pinos</li>
+            </ul>
+        </div>
+
+        <div class="card-fixacao permanente">
+            <div class="badge-tipo">Permanente</div>
+            <h3>Os Inseparáveis</h3>
+            <p>Depois de colocado, só sai na base da furadeira ou lixadeira. Segurança total!</p>
+            <div class="container-foto-elemento">
+                <img src="img/rebites.png" alt="Rebites e Processo de Solda" class="foto-tecnica">
+            </div>
+            <ul>
+                <li>🔥 Soldagem</li>
+                <li>🔨 Rebites</li>
+                <li>🔗 Colagem Industrial</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card-teoria roscas-neon">
+        <h3>Métrica vs. Inglesa (Withworth)</h3>
+        <p>Cuidado para não tentar rosquear um parafuso em polegada num furo métrico, ou você vai ver a rosca sumindo!</p>
+        <div class="flex-roscas">
+            <div class="rosca-item">
+                <span class="sigla-rosca">M</span>
+                <p><strong>Métrica:</strong> Ângulo de 60°. Medida em milímetros (ex: M10).</p>
+            </div>
+            <div class="vs-circle">VS</div>
+            <div class="rosca-item">
+                <span class="sigla-rosca">W</span>
+                <p><strong>Inglesa:</strong> Ângulo de 55°. Medida em polegadas (ex: 3/8").</p>
+            </div>
+        </div>
+        <div class="moldura-imagem-rosca">
+             <img src="img/roscas.png" alt="Comparação de Ângulos de Rosca" class="foto-tecnica">
+        </div>
+    </div>
+</section>
+
+<section class="secao-transmissao">
+    <div class="header-vibe-central">
+        <span class="emoji-grande">⚙️</span>
+        <h2>Transmissão e Apoio</h2>
+        <p>O que faz a máquina rodar sem "gritar".</p>
+    </div>
+
+    <div class="grid-transmissao">
+        <div class="card-tecnica-item neon-azul">
+            <span class="badge-vibe">TRANSMISSÃO</span>
+            <h3>Engrenagens</h3>
+            <p>Usadas para transmitir torque e rotação. Os tipos mudam conforme o esforço e o barulho!</p>
+            
+            <div class="moldura-centralizada">
+                <img src="img/engrenagens.png" alt="Tipos de Engrenagens" class="img-tecnica-final">
+            </div>
+
+            <div class="lista-curta">
+                <span>⚙️ <strong>Dentes Retos:</strong> Barulhentas, mas simples.</span>
+                <span>⚙️ <strong>Helicoidais:</strong> Silenciosas e fortes.</span>
+                <span>⚙️ <strong>Cônicas:</strong> Mudam o ângulo da força.</span>
+                <span>⚙️ <strong>Sem-fim:</strong> Grande redução de velocidade.</span>
+            </div>
+        </div>
+
+        <div class="card-tecnica-item neon-vermelho">
+            <span class="badge-vibe">APOIO</span>
+            <h3>Rolamentos</h3>
+            <p>A função principal é <strong>reduzir o atrito</strong> e suportar a carga do eixo.</p>
+            
+            <div class="moldura-centralizada">
+                <img src="img/rolamentos.png" alt="Tipos de Rolamentos" class="img-tecnica-final">
+            </div>
+
+            <div class="lista-curta">
+                <span>🔴 <strong>Esferas:</strong> Altas rotações, cargas leves.</span>
+                <span>🔴 <strong>Rolos:</strong> Cargas pesadas e lentas.</span>
+                <span>🔴 <strong>Agulhas:</strong> Quando não tem espaço no eixo.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+
+ <script src="tolerancia.js"></script>
+
+</body>
+</html>

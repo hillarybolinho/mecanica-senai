@@ -1,0 +1,243 @@
+/* Importando uma fonte mais moderna e robusta */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a; /* Fundo escuro para destacar as cores */
+    color: white;
+}
+
+/* --- SEÇÃO DE ENTRADA (A "CAPA") --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Degradê mais vivo e profundo */
+    background: radial-gradient(circle at center, #0054a6 0%, #001220 100%);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de brilho no fundo para não ficar frio */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ff0000;
+    filter: blur(150px);
+    opacity: 0.2;
+    top: 10%;
+    left: 10%;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); /* Fonte que se ajusta ao tamanho da tela */
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: #00d4ff; /* Azul ciano brilhante */
+    font-weight: 400;
+    margin-bottom: 25px;
+    display: block;
+}
+
+/* AVISO EM VERMELHO NEON */
+.aviso {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffffff;
+    background: #ff4d4d;
+    padding: 8px 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.6); /* Brilho neon */
+    margin-bottom: 40px;
+    animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 77, 77, 0.6); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 77, 77, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 77, 77, 0.6); }
+}
+
+/* Botão de Rolagem Estiloso */
+.botao-rolar {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: #001220;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+.botao-rolar:hover {
+    background: #00d4ff;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+}
+
+/* --- SEÇÃO DE MATÉRIAS --- */
+.secao-materias {
+    min-height: 100vh;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #001220, #0a0a0a);
+    text-align: center;
+}
+
+.secao-materias h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    
+    /* 1. Define o degradê */
+    background: linear-gradient(to right, #ffffff, #00d4ff);
+    
+    /* 2. Faz o fundo ser "cortado" no formato das letras */
+    -webkit-background-clip: text;
+    background-clip: text; /* Versão padrão para garantir */
+    
+    /* 3. Deixa a cor original do texto transparente para o fundo aparecer */
+    -webkit-text-fill-color: transparent; 
+    
+    /* Fallback: Caso o navegador seja muito antigo e não suporte, ele mostra essa cor */
+    color: #00d4ff; 
+
+      font-size: 3rem;
+    margin-bottom: 60px;
+    background: linear-gradient(to right, #ffffff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+
+
+/* Footer */
+footer {
+    padding: 40px;
+    background: #000;
+    border-top: 1px solid #1a1a1a;
+    color: #555;
+    text-align: center;
+
+}
+
+/* Estilo dos Cards de Matéria */
+.card-link {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 50px;
+    border-radius: 15px;
+    border: 2px solid #00d4ff; /* Borda Azul Ciano */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.card-link:hover {
+    background: #00d4ff;
+    color: #000;
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+}
+
+/* Ajustes para Celular (Telas com menos de 600px) */
+@media (max-width: 600px) {
+    .p-calculadora-container {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        padding: 15px; /* Diminui um pouco o espaço interno */
+    }
+
+    .p-section-title {
+        font-size: 1.5rem; /* Diminui um pouco o título para não quebrar linha */
+    }
+
+    .p-btn-principal {
+        padding: 15px; /* Botão um pouco maior para facilitar o toque com o dedo */
+        font-size: 1.1rem;
+    }
+
+    .p-resultado-box {
+        font-size: 1.2rem; /* Ajusta o tamanho do resultado */
+    }
+}
+
+/* Isso garante que os botões fiquem um ao lado do outro sem travar o efeito */
+.container-botoes {
+    display: flex;
+    flex-wrap: wrap;       /* Faz pular linha no celular */
+    justify-content: center;
+    gap: 30px;             /* Espaço entre os botões para o brilho aparecer */
+    padding: 20px;
+}
+
+/* --- ESTILO PARA A PÁGINA DE DESENHO TÉCNICO --- */
+
+/* Fundo quadriculado matemático (Grid) */
+.body-desenho {
+    background-color: #ffffff;
+    background-image: 
+        linear-gradient(#e0e0e0 1px, transparent 1px),
+        linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px; /* Tamanho dos quadradinhos */
+    color: #333; /* Texto escuro para contrastar com o fundo branco */
+}
+
+/* Título estilo Prancheta */
+.titulo-prancheta {
+    border-left: 10px solid #00d4ff;
+    padding-left: 15px;
+    margin: 40px 0;
+}
+
+.card-link {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 50px;
+    border-radius: 15px;
+    border: 2px solid #00d4ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    
+    /* As linhas abaixo garantem o tamanho igual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px; /* Aumentei um pouquinho o min-width para caber todos confortavelmente */
+    height: 100px;    /* Fixamos uma altura para todos ficarem alinhados */
+    text-align: center;
+    
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}

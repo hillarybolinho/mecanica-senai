@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo Branco Limpo */
+body.pagina-tolerancia {
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header com pegada Neon */
+.header-neon {
+    height: 50vh;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #0054a6;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.moldura-energia {
+    padding: 30px;
+    border: 4px solid #ff0000; /* Vermelho vibrante */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4), inset 0 0 15px rgba(255, 0, 0, 0.2); /* Neon Vermelho */
+    background: white;
+    border-radius: 10px;
+}
+
+.header-neon h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #0054a6; /* Azul Senai */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    /* Neon azul sutil no texto */
+    text-shadow: 0 0 10px rgba(0, 84, 166, 0.2);
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #ff0000;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Botão Voltar Clean */
+.btn-voltar-clean {
+    margin-top: 30px;
+    color: #0054a6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 2px solid #0054a6;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-voltar-clean:hover {
+    background: #0054a6;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 84, 166, 0.5);
+}
+
+/* Container do Fluxo */
+.fluxo-conteudo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Cards de Teoria */
+.card-teoria {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 2px solid #eee;
+    transition: 0.3s;
+}
+
+.neon-azul { box-shadow: 0 10px 30px rgba(0, 84, 166, 0.1); border-left: 8px solid #0054a6; }
+.neon-vermelho { box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1); border-left: 8px solid #ff0000; }
+
+.header-card { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+
+.badge-vibe {
+    background: #333;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Regra de Ouro */
+.regra-de-ouro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fdfdfd;
+    padding: 30px;
+    margin-top: 25px;
+    border: 2px dashed #0054a6;
+    border-radius: 10px;
+}
+
+.letra-grande {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    display: block;
+}
+
+.destaque-red { color: #ff0000; font-size: 1.2rem; text-shadow: 0 0 5px rgba(255,0,0,0.2); }
+.destaque-blue { color: #0054a6; font-size: 1.2rem; }
+
+/* Tabela Interativa */
+.seletor-it {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.btn-it {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-it.active {
+    background: #ff0000;
+    color: white;
+    border-color: #ff0000;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.painel-info-it {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    min-height: 150px;
+}
+
+.exemplo-uso {
+    display: inline-block;
+    margin-top: 15px;
+    background: #0054a6;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+/* Título da Seção */
+.header-vibe-central {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.emoji-grande { font-size: 3rem; display: block; }
+
+/* Grid de Cards */
+.grid-elementos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card-fixacao {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    border: 3px solid #eee;
+    transition: 0.4s;
+}
+
+/* Efeito Neon nos Cards */
+.card-fixacao.movel { border-color: #00d4ff; box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1); }
+.card-fixacao.permanente { border-color: #ff4d4d; box-shadow: 0 10px 20px rgba(255, 77, 77, 0.1); }
+
+.card-fixacao:hover { transform: translateY(-10px); }
+
+.badge-tipo {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.movel .badge-tipo { background: #00d4ff; box-shadow: 0 0 15px rgba(0, 212, 255, 0.5); }
+.permanente .badge-tipo { background: #ff4d4d; box-shadow: 0 0 15px rgba(255, 77, 77, 0.5); }
+
+/* Fotos */
+.container-foto-elemento {
+    background: #f9f9f9;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-tecnica {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Comparativo de Roscas */
+.roscas-neon {
+    border: 2px solid #333;
+    background: #fafafa;
+}
+
+.flex-roscas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.sigla-rosca {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #0054a6;
+}
+
+.vs-circle {
+    background: #333;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.moldura-imagem-rosca {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR (Telas até 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Ajuste do Header */
+    .header-neon {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .moldura-energia {
+        padding: 20px;
+    }
+
+    /* Regra de Ouro (H7 / g6) */
+    .regra-de-ouro {
+        flex-direction: column; /* Coloca um embaixo do outro no celular */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .divisor-regra {
+        width: 80%;
+        height: 2px;
+        background: #eee;
+        margin: 10px 0;
+    }
+
+    .letra-grande {
+        font-size: 3rem; /* Diminui um pouco para não vazar */
+    }
+
+    /* Tabela Interativa de IT */
+    .seletor-it {
+        flex-direction: column; /* Botões viram uma lista vertical */
+    }
+
+    .btn-it {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Grid de Elementos de Fixação */
+    .grid-elementos {
+        grid-template-columns: 1fr; /* Força uma coluna única */
+    }
+
+    /* Comparativo de Roscas */
+    .flex-roscas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vs-circle {
+        margin: 10px 0;
+    }
+
+    .sigla-rosca {
+        font-size: 2.5rem;
+    }
+
+    /* Ajuste de imagens para não estourarem */
+    .foto-tecnica {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 400px) {
+    .header-neon h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card-teoria {
+        padding: 15px;
+    }
+}
+
+/* Centralização Total da Imagem de Roscas */
+.moldura-imagem-rosca {
+    margin-top: 30px;
+    border-top: 2px dashed #ddd; /* Uma linha tracejada para separar */
+    padding-top: 30px;
+    
+    /* Mágica da centralização */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+}
+
+.moldura-imagem-rosca img {
+    /* Define um tamanho bom para notebook, mas sem estourar */
+    max-width: 650px; 
+    width: 100%;
+    height: auto;
+    
+    /* Adiciona uma sombra suave para dar profundidade */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: block;
+}
+
+/* Legenda da imagem centralizada */
+.moldura-imagem-rosca::after {
+    content: "Fig 2.1 - Comparativo de Perfil: Métrico (60°) vs Withworth (55°)";
+    display: block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR (Telas até 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Ajuste do Header */
+    .header-neon {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .moldura-energia {
+        padding: 20px;
+    }
+
+    /* Regra de Ouro (H7 / g6) */
+    .regra-de-ouro {
+        flex-direction: column; /* Coloca um embaixo do outro no celular */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .divisor-regra {
+        width: 80%;
+        height: 2px;
+        background: #eee;
+        margin: 10px 0;
+    }
+
+    .letra-grande {
+        font-size: 3rem; /* Diminui um pouco para não vazar */
+    }
+
+    /* Tabela Interativa de IT */
+    .seletor-it {
+        flex-direction: column; /* Botões viram uma lista vertical */
+    }
+
+    .btn-it {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Grid de Elementos de Fixação */
+    .grid-elementos {
+        grid-template-columns: 1fr; /* Força uma coluna única */
+    }
+
+    /* Comparativo de Roscas */
+    .flex-roscas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vs-circle {
+        margin: 10px 0;
+    }
+
+    .sigla-rosca {
+        font-size: 2.5rem;
+    }
+
+    /* Ajuste de imagens para não estourarem */
+    .foto-tecnica {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 400px) {
+    .header-neon h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card-teoria {
+        padding: 15px;
+    }
+}
+
+/* Container da Grade de Transmissão */
+.grid-transmissao {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Empilha no celular */
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.card-tecnica-item {
+    flex: 1;
+    min-width: 350px; /* Largura mínima para o notebook */
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Moldura das Fotos */
+.moldura-centralizada {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fdfdfd;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    height: 250px; /* Altura fixa para as fotos ficarem alinhadas */
+}
+
+.img-tecnica-final {
+    max-width: 100%;
+    max-height: 100%; /* Garante que a foto não estoure a moldura */
+    object-fit: contain; /* Mantém a proporção da foto sem cortar */
+}
+
+/* Estilo das Listas Curtas */
+.lista-curta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto; /* Empurra a lista para o fundo do card */
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+    .card-tecnica-item {
+        min-width: 100%; /* No celular, ocupa tudo */
+    }
+    .moldura-centralizada {
+        height: auto; /* No celular, a altura pode variar */
+    }
+}
+
+
